@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @move.name %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @move.tipo %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @move.value %>
+</p>
+
+<p>
+  <strong>Sentido:</strong>
+  <%= @move.sentido %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @move.descricao %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @move.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_move_path(@move) %> |
+<%= link_to 'Back', moves_path %>

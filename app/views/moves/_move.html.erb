@@ -1,0 +1,11 @@
+<% if move.user_id == current_user.id %>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric"><%= move.name %></td>
+      <td class="mdl-data-table__cell--non-numeric"><%= move.tipo %></td>
+      <td>  <%= move.sentido == "entrada"? "R#{number_to_currency(move.value, scale: 2)}": "" %></td>
+      <td>  <%= move.sentido == "saida"? "R#{number_to_currency(move.value, scale: 2)}": "" %></td>
+      <td><%= link_to 'Show', move %></td>
+      <td><%= link_to 'Edit', edit_move_path(move) %></td>
+      <td><%= link_to 'Destroy', move, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>

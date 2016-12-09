@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Moves</h1>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric"> <%= t :money %> </th>
+      <th> Entrada </th>
+      <th> Saída </th>
+      <th colspan="3" class="mdl-data-table__cell--non-numeric"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%=	render @money %>
+  </tbody>
+</table>
+
+<br>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric"> <%= t :card %> </th>
+    <th> Entrada </th>
+    <th> Saída </th>
+    <th class="mdl-data-table__cell--non-numeric"> Data </th>
+    <th colspan="3" class="mdl-data-table__cell--non-numeric">Operações CRUD</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <%=	render @card %>
+  </tbody>
+</table>
+
+<br>
+
+<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric"> <%= t :money %> </th>
+    <th class="mdl-data-table__cell--non-numeric">Tipo</th>
+    <th> Entrada </th>
+    <th> Saída </th>
+    <th colspan="3" class="mdl-data-table__cell--non-numeric"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <%=	render @poup %>
+  </tbody>
+</table>
+
+<%= link_to 'New Move', new_move_path %>

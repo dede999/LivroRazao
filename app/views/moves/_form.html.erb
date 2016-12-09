@@ -1,0 +1,48 @@
+<%= form_for(move) do |f| %>
+  <% if move.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(move.errors.count, "error") %> prohibited this move from being saved:</h2>
+
+
+      <ul>
+      <% move.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tipo %>
+    <%= f.text_field :tipo %>
+  </div>
+
+  <div class="field">
+    <%= f.label :value %>
+    <%= f.number_field :value %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sentido %>
+    <%= f.text_field :sentido %>
+  </div>
+
+  <div class="field">
+    <%= f.label :descricao %>
+    <%= f.text_area :descricao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id, readonly: true, value: current_user.id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
