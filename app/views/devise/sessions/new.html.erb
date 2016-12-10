@@ -1,6 +1,6 @@
 <div class="mld-grid">
   <div class="mdl-cell-row">
-    <h2 class="mdl-cell mdl-cell--12-desktop  mdl-typography--text-center"> Log In </h2>
+    <h2 class="mdl-cell mdl-cell--12-desktop  mdl-typography--text-center"> <%=	t :log_in %> </h2>
     <hr>
   </div>
 
@@ -9,13 +9,13 @@
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <%= f.label :email, class: 'mdl-textfield__label' %>
         <strong> <%= f.email_field :email, autofocus: true, class: 'mdl-textfield__input campi' %> </strong>
+        <%= f.label (t :mail), class: 'mdl-textfield__label' %>
       </div><br>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <%= f.label :password, class: 'mdl-textfield__label' %>
         <strong style="font-size: xx-large;color: darkgoldenrod"> <%= f.password_field :password, autocomplete: "off", class: 'mdl-textfield__input', pattern: '[\d|\w]{6}[\d|\w]*' %> </strong>
+        <%= f.label (t :passwd), class: 'mdl-textfield__label' %>
       </div><br>
 
       <% if devise_mapping.rememberable? -%>
@@ -26,7 +26,7 @@
       <% end -%>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit (t :log_in), class: 'mdl-button mdl-js-button mdl-button--colored mdl-js-ripple-effect', style: 'background-color: darkgoldenrod; color: yellow' %>
       </div>
     <% end %>
 
