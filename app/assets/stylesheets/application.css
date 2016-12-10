@@ -26,6 +26,10 @@
     color: darkgoldenrod;
 }
 
+div.mdl-layout__tab-bar {
+    height: 45px;
+}
+
 @media (min-device-width: 480px){
 
     .metade {
