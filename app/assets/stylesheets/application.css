@@ -26,12 +26,25 @@
     color: darkgoldenrod;
 }
 
-@media (min-device-width: 840px){
+@media (min-device-width: 480px){
 
     .metade {
         width: 49%;
     }
+
+    img {
+        width: 80%;
+    }
+
 }
+
+@media (min-device-width: 840px) {
+    .metade {
+        width: 49%;
+    }
+}
+
+
 
 .esquerda {
     float: left;

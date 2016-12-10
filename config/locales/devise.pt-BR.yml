@@ -1,6 +1,28 @@
 # encoding: UTF-8
 # pt-BR translations for Devise
 pt-BR:
+
+  edit_pro: "Editar Perfil"
+  mail: "Email"
+  passwd: "Senha Nova"
+  cpasswd: "Digite novamente"
+  old_pwd: "Senha antiga"
+  conf_message: "Precisamos da senha antiga para atualizarmos."
+  cancel:  "Cancelar perfil?"
+  unsat: "Insatisfeito?"
+  c_button: "Cancelar"
+  back_button: "Voltar"
+  sign_in_title: "Cadastro"
+  cute: "Gerencie suas movimentações."
+  cute1: "Não perca o controle"
+  waiting-conf: "Esperando confirmação para"
+  min: "No mínimo 5 caracteres"
+  log_in: "Entre aqui"
+  forget: "Esqueceu a sua senha?"
+  email_conf: "Recebeu as instruções de confirmação?"
+  unlock: "Recebeu as instruções de desbloqueio?"
+  sign_in_with: "Entre com"
+
   devise:
     confirmations:
       confirmed: "Sua conta foi confirmada com sucesso. Você está logado."

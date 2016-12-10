@@ -16,14 +16,14 @@
   <%=	render @money %>
   <tr style="font-weight: bolder">
     <td> Total </td>
-    <td class="entrada"> R<%= number_to_currency totale("Dinheiro", current_user.id, "entrada")%></td>
-    <td class="despesa"> R<%= number_to_currency totale("Dinheiro", current_user.id, "saida")%></td>
+    <td class="entrada"> <%= number_to_currency totale("Dinheiro", current_user.id, "entrada")%></td>
+    <td class="despesa"> <%= number_to_currency totale("Dinheiro", current_user.id, "saida")%></td>
     <td></td>
     <% net = totale("Dinheiro", current_user.id, "entrada") - totale("Dinheiro", current_user.id, "saida") %>
     <% if net >= 0 %>
-        <td class="entrada"> R<%= number_to_currency net %> </td>
+        <td class="entrada"> <%= number_to_currency net %> </td>
     <% else %>
-        <td class="deficit"> R<%= number_to_currency net %> </td>
+        <td class="deficit"> <%= number_to_currency net %> </td>
     <% end %>
   </tr>
   </tbody>
@@ -47,14 +47,14 @@
   <%=	render @card %>
   <tr style="font-weight: bolder">
     <td> Total </td>
-    <td class="entrada"> R<%= number_to_currency totale("Cartão", current_user.id, "entrada")%></td>
-    <td class="despesa"> R<%= number_to_currency totale("Cartão", current_user.id, "saida")%></td>
+    <td class="entrada"> <%= number_to_currency totale("Cartão", current_user.id, "entrada")%></td>
+    <td class="despesa"> <%= number_to_currency totale("Cartão", current_user.id, "saida")%></td>
     <td></td>
     <% net = totale("Cartão", current_user.id, "entrada") - totale("Cartão", current_user.id, "saida") %>
     <% if net >= 0 %>
-        <td class="entrada"> R<%= number_to_currency net %> </td>
+        <td class="entrada"> <%= number_to_currency net %> </td>
     <% else %>
-        <td class="deficit"> R<%= number_to_currency net %> </td>
+        <td class="deficit"> <%= number_to_currency net %> </td>
     <% end %>
   </tr>
   </tbody>
@@ -77,14 +77,14 @@
   <%=	render @poup %>
   <tr style="font-weight: bolder">
     <td> Total </td>
-    <td class="entrada"> R<%= number_to_currency totale("Poupança", current_user.id, "entrada")%></td>
-    <td class="despesa"> R<%= number_to_currency totale("Poupança", current_user.id, "saida")%></td>
+    <td class="entrada"> <%= number_to_currency totale("Poupança", current_user.id, "entrada")%></td>
+    <td class="despesa"> <%= number_to_currency totale("Poupança", current_user.id, "saida")%></td>
     <td></td>
     <% net = totale("Poupança", current_user.id, "entrada") - totale("Poupança", current_user.id, "saida") %>
     <% if net >= 0 %>
-        <td class="entrada"> R<%= number_to_currency net %> </td>
+        <td class="entrada"> <%= number_to_currency net %> </td>
     <% else %>
-        <td class="deficit"> R<%= number_to_currency net %> </td>
+        <td class="deficit"> <%= number_to_currency net %> </td>
     <% end %>
   </tr>
   </tbody>

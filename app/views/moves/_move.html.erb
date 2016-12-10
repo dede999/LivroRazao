@@ -2,11 +2,11 @@
     <tr>
       <td class="mdl-data-table__cell--non-numeric"><%= move.name %></td>
       <% if move.sentido == "entrada" %>
-          <td class="entrada">  <%= "R#{number_to_currency(move.value, scale: 2)}"%> </td>
+          <td class="entrada">  <%= number_to_currency(move.value, scale: 2) %> </td>
           <td></td>
       <%	else  %>
           <td></td>
-          <td class="despesa">  <%= "R#{number_to_currency(move.value, scale: 2)}"%> </td>
+          <td class="despesa">  <%= number_to_currency(move.value, scale: 2) %> </td>
       <% end %>
       <td>  <%= I18n.l (move.created_at), format: :short %> </td>
       <td>  <i> <%= link_to 'pageview', move, class: "material-icons", style: "text-decoration: none" %> </i>

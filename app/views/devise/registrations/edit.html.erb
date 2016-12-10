@@ -11,45 +11,45 @@
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= f.email_field :email, autofocus: true, class: 'mdl-textfield__input' %>
-        <strong style="font-size: xx-large"> <%= f.label 'Email', class: 'mdl-textfield__label' %> </strong>
+        <strong style="font-size: xx-large"> <%= f.label (t :mail), class: 'mdl-textfield__label' %> </strong>
       </div>
       <br>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <div><%= ((t :waiting-conf) + " ") + resource.unconfirmed_email %></div>
       <% end %>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= f.password_field :password, autocomplete: "off", pattern: '[\d|\w]{6}', class: 'mdl-textfield__input' %>
-        <strong style="font-size: xx-large"> <%= f.label 'Senha', class: 'mdl-textfield__label' %> </strong>
-        <span class="mdl-textfield__error">6 caracteres no mínimo</span>
+        <strong style="font-size: xx-large"> <%= f.label (t :passwd), class: 'mdl-textfield__label' %> </strong>
+        <span class="mdl-textfield__error"> <%=	t :min %> </span>
       </div>
       <br>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= f.password_field :password_confirmation, autocomplete: "off", class: 'mdl-textfield__input' %>
-        <strong style="font-size: xx-large"> <%= f.label 'Redigite a senha', class: 'mdl-textfield__label' %> </strong>
+        <strong style="font-size: xx-large"> <%= f.label (t :cpasswd), class: 'mdl-textfield__label' %> </strong>
       </div>
       <br>
 
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= f.password_field :current_password, autocomplete: "off", class: 'mdl-textfield__input' %>
-        <strong style="font-size: xx-large"> <%= f.label 'Senha Antiga', class: 'mdl-textfield__label' %> </strong>
-        <i>Precisamos da senha antiga para atualizarmos.</i>
+        <strong style="font-size: xx-large"> <%= f.label (t :old_pwd), class: 'mdl-textfield__label' %> </strong>
+        <i> <%=	t :conf_message %> </i>
       </div>
       <br>
 
       <div class="actions">
-        <%= f.submit "Log in", class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect'%>
+        <%= f.submit (t :edit_pro), class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect'%>
       </div>
   <% end %>
 </div>
 
 <div class="metade direita mdl-typography--text-center">
-  <h3> Cancelar conta</h3>
-  <p> Insatisfeito? <i class="material-icons">sentiment_dissatisfied</i> <%= button_to "Cancelar conta", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect' %></p>
-  <%= link_to "Voltar", :back, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect' %>
+  <h3> <%=	t :cancel %> </h3>
+  <p> <%= t :unsat %> <i class="material-icons">sentiment_dissatisfied</i> <%= button_to (t :c_button), registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect' %></p>
+  <%= link_to (t :back_button), :back, class: 'mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect' %>
 </div>
 
 
