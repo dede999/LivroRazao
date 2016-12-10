@@ -1,0 +1,42 @@
+<div class="mdl-typography--text-center">
+  <h1> <%= t :card %> </h1>
+  <hr>
+  <h4> <%= t :Cmessage %>  </h4>
+  <br>
+</div>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 65%; left: 15%">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric"> <%= t :card %> </th>
+    <th style="text-align: center"> <%= t :entrada %> </th>
+    <th style="text-align: center"> <%= t :saida %> </th>
+    <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
+    <th class="mdl-data-table__cell--non-numeric"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%=	render @card %>
+  <tr style="font-weight: bolder">
+    <td> Total </td>
+    <td class="entrada"> <%= number_to_currency totale("Cartão", current_user.id, "entrada")%></td>
+    <td class="despesa"> <%= number_to_currency totale("Cartão", current_user.id, "saida")%></td>
+    <td></td>
+    <% net = totale("Cartão", current_user.id, "entrada") - totale("Cartão", current_user.id, "saida") %>
+    <% if net >= 0 %>
+        <td class="entrada"> <%= number_to_currency net %> </td>
+    <% else %>
+        <td class="deficit"> <%= number_to_currency net %> </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+
+<div class="mdl-grid">
+  <div class="mdl-cell-row">
+    <%= link_to (t :novo), new_move_path, class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect', style: "background-color: darkgoldenrod; color: white" %>
+    <div class="mdl-layout-spacer"></div>
+    <%=	link_to (t :back_button), url_for(:back), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect', style: 'color: brown; text-weight: bolder' %>
+  </div>
+</div>

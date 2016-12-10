@@ -1,7 +1,6 @@
 class MovesController < ApplicationController
   before_action :set_move, only: [:show, :edit, :update, :destroy]
 
-
   # GET /moves
   # GET /moves.json
   def index
@@ -9,6 +8,18 @@ class MovesController < ApplicationController
     @card = Move.where(:tipo => 'Cartão')
     @poup = Move.where(:tipo => 'Poupança')
     @moves = Move.all
+  end
+
+  def dinheiro
+    @money = Move.where(:tipo => 'Dinheiro')
+  end
+
+  def cartao
+    @card = Move.where(:tipo => 'Cartão')
+  end
+
+  def poup
+    @poup = Move.where(:tipo => 'Poupança')
   end
 
   # GET /moves/1

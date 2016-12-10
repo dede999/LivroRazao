@@ -1,14 +1,18 @@
-<h1> Moves </h1>
+<div class="mdl-typography--text-center">
+  <h1> <%= t :title %> </h1>
+  <h4> <%= t :p1 %> <br> <%= t :p2 %> </h4>
+  <hr>
+</div>
 
 <div class="em_linha">
-<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%; left: 5%">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 35%; left: 10%">
   <thead>
   <tr>
     <th class="mdl-data-table__cell--non-numeric"> <%= t :money %> </th>
-    <th style="text-align: center"> Entrada </th>
-    <th style="text-align: center"> Saída </th>
+    <th style="text-align: center"> <%= t :entrada %> </th>
+    <th style="text-align: center"> <%= t :saida %> </th>
     <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
-    <th class="mdl-data-table__cell--non-numeric"> Descrição / Total  </th>
+    <th class="mdl-data-table__cell--non-numeric"></th>
   </tr>
   </thead>
 
@@ -31,14 +35,14 @@
 
   <br>
 
-<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 35%; left: 10%">
   <thead>
   <tr>
     <th class="mdl-data-table__cell--non-numeric"> <%= t :card %> </th>
-    <th style="text-align: center"> Entrada </th>
-    <th style="text-align: center"> Saída </th>
+    <th style="text-align: center"> <%= t :entrada %> </th>
+    <th style="text-align: center"> <%= t :saida %> </th>
     <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
-    <th class="mdl-data-table__cell--non-numeric"> Descrição </th>
+    <th class="mdl-data-table__cell--non-numeric"></th>
   </tr>
 
   </thead>
@@ -62,14 +66,14 @@
 
 <br>
 
-<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 35%; left: 10%">
   <thead>
   <tr>
     <th class="mdl-data-table__cell--non-numeric"> <%= I18n.t :poup %> </th>
-    <th style="text-align: center"> Entrada </th>
-    <th style="text-align: center"> Saída </th>
+    <th style="text-align: center"> <%= t :entrada %> </th>
+    <th style="text-align: center"> <%= t :saida %> </th>
     <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
-    <th class="mdl-data-table__cell--non-numeric"> Descrição </th>
+    <th class="mdl-data-table__cell--non-numeric"></th>
   </tr>
   </thead>
 

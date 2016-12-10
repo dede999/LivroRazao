@@ -2,6 +2,18 @@
 # pt-BR translations for Devise
 pt-BR:
 
+  Mmessage: "Nessa página ficam as transferências (entradas e saídas) efeituadas em dinheiro. Futuramente termos uma
+                    funcionalidade que geram como entrada uma lista de compras que gera uma outra entrada na tebela de transações
+                    de acordo com a forma de pagamento"
+  Cmessage: "Nessa página ficam as transferências (entradas e saídas) efeituadas em cartão de crédito. Futuramente termos uma
+                      funcionalidade que geram como entrada uma lista de compras que gera uma outra entrada na tebela de transações
+                      de acordo com a forma de pagamento"
+  Pmessage: "Nessa página ficam as transferências (entradas e saídas) efeituadas na poupança. Futuramente termos uma
+                      funcionalidade que geram como entrada uma lista de compras que gera uma outra entrada na tebela de transações
+                      de acordo com a forma de pagamento"
+  novo: "+ Tranferência"
+  entrada: "Entrada"
+  saida: "Saída"
   edit_pro: "Editar Perfil"
   mail: "Email"
   passwd: "Senha Nova"
@@ -22,6 +34,8 @@ pt-BR:
   email_conf: "Recebeu as instruções de confirmação?"
   unlock: "Recebeu as instruções de desbloqueio?"
   sign_in_with: "Entre com"
+  lembra: "Lembre de mim"
+  adicionar: "Adicionar movimentação"
 
   devise:
     confirmations:

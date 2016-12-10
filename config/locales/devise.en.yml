@@ -1,6 +1,18 @@
 # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 en:
 
+  Mmessage: "In this page are shown transfers (ins and outs) made in cash. In the future, there will be a feature that creates
+              a list of things you bought recently so you can track any kind of expense you have made. Creating a purchase,
+              there will be a corresponding transfer register according to the kind of transfer you made"
+  Cmessage: "In this page are shown transfers (ins and outs) made in credit card. In the future, there will be a feature that creates
+              a list of things you bought recently so you can track any kind of expense you have made. Creating a purchase,
+              there will be a corresponding transfer register according to the kind of transfer you made"
+  Pmessage: "In this page are shown transfers (ins and outs) made with bank savings. In the future, there will be a feature that creates
+              a list of things you bought recently so you can track any kind of expense you have made. Creating a purchase,
+              there will be a corresponding transfer register according to the kind of transfer you made"
+  novo: "+ Move"
+  entrada: "In"
+  saida: "Out"
   edit_pro: "Edit Profile"
   mail: "Email"
   passwd: "New password"
@@ -21,6 +33,8 @@ en:
   email_conf: "Didn't receive confirmation instructions?"
   unlock: "Didn't receive unlock instructions?"
   sign_in_with: "Sign in with"
+  lembra: "Remember me"
+  adicionar: "Add Move"
 
   devise:
     confirmations:

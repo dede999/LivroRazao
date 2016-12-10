@@ -24,5 +24,10 @@ en:
   money: 'Money Transfers'
   card: 'Card Moves'
   poup: 'Savings'
+  title: "Central Hub"
+  about: "About Me"
   empty_line: 'No transfers have been made yet'
-
+  p1: "Welcome to my Money Flow Tool. It is quite simple and it's made to make me improve my Ruby on Rails tecnical skills,
+    and my habilities to work on small/medium projects, and client requisitions"
+  p2: "As soon as I 'finish' this project, I'll intend to write a page to help users with any doubts. Anything you nees,
+    you can send an email at andreluizsa00@gmail.com"

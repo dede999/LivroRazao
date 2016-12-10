@@ -64,6 +64,13 @@ pt-BR:
   card: No Cartão
   money: Dinheiro
   poup: Poupança
+  about: Sobre Mim
+  title: "Central de Informações"
+  p1: "Bem vindo à minha aplicação de controle de entradas e saídas. Ela é simples, e visa tão somente o meu
+    aprendizado técnico em Rails, bem como a minha habilidade de gerenciar um projeto de pequeno ou médio porte com
+    requisições de clientes."
+  p2: "Assim que 'terminar' essa aplicação, penso em escrever uma página que auxilie o usuário com eventuais dúvidas.
+    Para tudo o que você precisar, pode mandar um email para andreluizsa00@gmail.com"
   datetime:
     distance_in_words:
       about_x_hours:
