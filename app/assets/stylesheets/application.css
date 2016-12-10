@@ -16,15 +16,20 @@
 
 
 .coin {
-    background-color: gold;
+    background-color: wheat;
     border: groove 5px darkgoldenrod;
     border-radius: 20px;
+}
+
+.campi{
+    font-size: xx-large;
+    color: darkgoldenrod;
 }
 
 @media (min-device-width: 840px){
 
     .metade {
-        width: 45%;
+        width: 49%;
     }
 }
 
@@ -34,4 +39,8 @@
 
 .direita {
     float: right;
+}
+
+div.mdl-cell-row {
+    align-content: center;
 }

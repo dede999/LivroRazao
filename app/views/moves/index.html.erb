@@ -1,56 +1,94 @@
-<p id="notice"><%= notice %></p>
+<h1> Moves </h1>
 
-<h1>Moves</h1>
-
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric"> <%= t :money %> </th>
-      <th> Entrada </th>
-      <th> Saída </th>
-      <th colspan="3" class="mdl-data-table__cell--non-numeric"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%=	render @money %>
-  </tbody>
-</table>
-
-<br>
-
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-  <tr>
-    <th class="mdl-data-table__cell--non-numeric"> <%= t :card %> </th>
-    <th> Entrada </th>
-    <th> Saída </th>
-    <th class="mdl-data-table__cell--non-numeric"> Data </th>
-    <th colspan="3" class="mdl-data-table__cell--non-numeric">Operações CRUD</th>
-  </tr>
-  </thead>
-
-  <tbody>
-    <%=	render @card %>
-  </tbody>
-</table>
-
-<br>
-
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+<div class="em_linha">
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%; left: 5%">
   <thead>
   <tr>
     <th class="mdl-data-table__cell--non-numeric"> <%= t :money %> </th>
-    <th class="mdl-data-table__cell--non-numeric">Tipo</th>
-    <th> Entrada </th>
-    <th> Saída </th>
-    <th colspan="3" class="mdl-data-table__cell--non-numeric"></th>
+    <th style="text-align: center"> Entrada </th>
+    <th style="text-align: center"> Saída </th>
+    <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
+    <th class="mdl-data-table__cell--non-numeric"> Descrição / Total  </th>
   </tr>
   </thead>
 
   <tbody>
-    <%=	render @poup %>
+  <%=	render @money %>
+  <tr style="font-weight: bolder">
+    <td> Total </td>
+    <td class="entrada"> R<%= number_to_currency totale("Dinheiro", current_user.id, "entrada")%></td>
+    <td class="despesa"> R<%= number_to_currency totale("Dinheiro", current_user.id, "saida")%></td>
+    <td></td>
+    <% net = totale("Dinheiro", current_user.id, "entrada") - totale("Dinheiro", current_user.id, "saida") %>
+    <% if net >= 0 %>
+        <td class="entrada"> R<%= number_to_currency net %> </td>
+    <% else %>
+        <td class="deficit"> R<%= number_to_currency net %> </td>
+    <% end %>
+  </tr>
   </tbody>
 </table>
+
+  <br>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric"> <%= t :card %> </th>
+    <th style="text-align: center"> Entrada </th>
+    <th style="text-align: center"> Saída </th>
+    <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
+    <th class="mdl-data-table__cell--non-numeric"> Descrição </th>
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <%=	render @card %>
+  <tr style="font-weight: bolder">
+    <td> Total </td>
+    <td class="entrada"> R<%= number_to_currency totale("Cartão", current_user.id, "entrada")%></td>
+    <td class="despesa"> R<%= number_to_currency totale("Cartão", current_user.id, "saida")%></td>
+    <td></td>
+    <% net = totale("Cartão", current_user.id, "entrada") - totale("Cartão", current_user.id, "saida") %>
+    <% if net >= 0 %>
+        <td class="entrada"> R<%= number_to_currency net %> </td>
+    <% else %>
+        <td class="deficit"> R<%= number_to_currency net %> </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 30%">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric"> <%= I18n.t :poup %> </th>
+    <th style="text-align: center"> Entrada </th>
+    <th style="text-align: center"> Saída </th>
+    <th class="mdl-data-table__cell--non-numeric" style="text-align: center"> Data </th>
+    <th class="mdl-data-table__cell--non-numeric"> Descrição </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <%=	render @poup %>
+  <tr style="font-weight: bolder">
+    <td> Total </td>
+    <td class="entrada"> R<%= number_to_currency totale("Poupança", current_user.id, "entrada")%></td>
+    <td class="despesa"> R<%= number_to_currency totale("Poupança", current_user.id, "saida")%></td>
+    <td></td>
+    <% net = totale("Poupança", current_user.id, "entrada") - totale("Poupança", current_user.id, "saida") %>
+    <% if net >= 0 %>
+        <td class="entrada"> R<%= number_to_currency net %> </td>
+    <% else %>
+        <td class="deficit"> R<%= number_to_currency net %> </td>
+    <% end %>
+  </tr>
+  </tbody>
+</table>
+</div>
 
 <%= link_to 'New Move', new_move_path %>

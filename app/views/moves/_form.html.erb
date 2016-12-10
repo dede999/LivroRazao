@@ -19,17 +19,17 @@
 
   <div class="field">
     <%= f.label :tipo %>
-    <%= f.text_field :tipo %>
+    <%= f.select :tipo, ["Dinheiro", "Cartão", "Poupança"] %>
   </div>
 
   <div class="field">
     <%= f.label :value %>
-    <%= f.number_field :value %>
+    <%= f.text_field :value %>
   </div>
 
   <div class="field">
     <%= f.label :sentido %>
-    <%= f.text_field :sentido %>
+    <%= f.select :sentido, ["entrada", "saida"] %>
   </div>
 
   <div class="field">
