@@ -20,13 +20,13 @@
       </div><br>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <strong style="font-size: xx-large;color: darkgoldenrod"> <%= f.password_field (t :passwd), autocomplete: "off", class: 'mdl-textfield__input', pattern: '[\d|\w]{6}[\d|\w]*' %> </strong>
-        <%= f.label :password, class: 'mdl-textfield__label' %>
+        <%= f.label (t :passwd), class: 'mdl-textfield__label' %>
+        <strong style="font-size: xx-large;color: darkgoldenrod"> <%= f.password_field :password, autocomplete: "off", class: 'mdl-textfield__input', pattern: '[\d|\w]{6}[\d|\w]*' %> </strong>
       </div><br>
 
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-        <strong style="font-size: xx-large"> <%= f.password_field (t :cpasswd), autocomplete: "off", class: 'mdl-textfield__input' %> </strong>
-        <%= f.label :password_confirmation, class: 'mdl-textfield__label' %>
+        <%= f.label (t :cpasswd), class: 'mdl-textfield__label' %>
+        <strong style="font-size: xx-large"> <%= f.password_field :password_confirmation, autocomplete: "off", class: 'mdl-textfield__input' %> </strong>
       </div><br>
 
       <div class="mdl-grid" style="left: 50%">
