@@ -28,14 +28,15 @@
           </div>
         </div>
         <% if user_signed_in? %>
-          <div class="mdl-layout__tab-bar mdl-js-ripple-effect" style="color: black">
-            <%=	link_to 'HOME', root_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
-            <%=	link_to (t :money), dinheiro_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
-            <%=	link_to (t :card), cartao_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
-            <%=	link_to (t :poup), poupanca_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
-            <%=	link_to (t :about), info_sobre_mim_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
-            <div class="mdl-layout-spacer"></div>
-            <%=	link_to (t :novo), new_move_path, class: 'mdl-layout__tab is-active', style: 'text-decoration: none' %>
+          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" style="color: black">
+            <div class="mdl-tabs__tab-bar">
+              <%=	link_to 'HOME', root_path, class: 'mdl-tabs__tab is-active mdl-tabs__panel', style: 'text-decoration: none' %>
+              <%=	link_to (t :money), dinheiro_path, class: 'mdl-tabs__tab is-active mdl-tabs__panel', style: 'text-decoration: none' %>
+              <%=	link_to (t :card), cartao_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
+              <%=	link_to (t :poup), poupanca_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
+              <%=	link_to (t :about), info_sobre_mim_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
+              <%=	link_to (t :novo), new_move_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
+            </div>
           </div>
         <% end %>
       </header>

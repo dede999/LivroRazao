@@ -10,6 +10,7 @@
       <% end %>
       <td>  <%= I18n.l (move.created_at), format: :short %> </td>
       <td>  <i> <%= link_to 'pageview', move, class: "material-icons", style: "text-decoration: none" %> </i>
-      <i> <%= link_to 'delete', move, method: :delete, class: "material-icons", style: "text-decoration: none", data: { confirm: 'Are you sure?' } %> </i> </td>
+      <i> <%= link_to 'delete', move, method: :delete, class: "material-icons delete_move",
+                      style: "text-decoration: none", data: { confirm: 'Are you sure?' }, remote: true %> </i> </td>
     </tr>
 <% end %>

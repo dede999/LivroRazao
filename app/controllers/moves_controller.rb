@@ -73,6 +73,7 @@ class MovesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to moves_url, notice: 'Move was successfully destroyed.' }
       format.json { head :no_content }
+      format.js { render :layout => false }
     end
   end
 
