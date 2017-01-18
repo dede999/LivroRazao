@@ -1,0 +1,49 @@
+<%= form_for(transfer) do |f| %>
+  <% if transfer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transfer.errors.count, "error") %> prohibited this transfer from being saved:</h2>
+
+      <ul>
+      <% transfer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% dia = Time.now %>
+  <div class="field">
+    <%= f.label :from %>
+    <%= f.select :from, ["Dinheiro", "Cartão", "Poupança"] %>
+  </div>
+
+  <div class="field">
+    <%= f.label :to %>
+    <%= f.select :to, ["Dinheiro", "Cartão", "Poupança"] %>
+  </div>
+
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <strong><%= f.text_field :value, class: 'mdl-textfield__input', value: 0.0 %></strong>
+    <%= f.label :value, class: 'mdl-textfield__label' %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :user_id, readonly: true, value: current_user.id %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :dia, readonly: true, value: dia.day %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :mes, readonly: true, value: dia.month %>
+  </div>
+
+  <div class="field">
+    <%= f.hidden_field :ano, readonly: true, value: dia.year %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

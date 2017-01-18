@@ -11,7 +11,9 @@ pt-BR:
   Pmessage: "Nessa página ficam as transferências (entradas e saídas) efeituadas na poupança. Futuramente termos uma
                       funcionalidade que geram como entrada uma lista de compras que gera uma outra entrada na tebela de transações
                       de acordo com a forma de pagamento"
-  novo: "+ Tranferência"
+  novo: "Nova Movimentação"
+  transf: "Nova Transferência"
+  buy: "Compra"
   entrada: "Entrada"
   saida: "Saída"
   edit_pro: "Editar Perfil"

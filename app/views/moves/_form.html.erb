@@ -3,7 +3,6 @@
     <div id="error_explanation">
       <h2><%= pluralize(move.errors.count, "error") %> prohibited this move from being saved:</h2>
 
-
       <ul>
       <% move.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -12,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <strong><%= f.text_field :name, class: 'mdl-textfield__input' %></strong>
+    <%= f.label :name, class: 'mdl-textfield__label' %>
   </div>
 
   <div class="field">
@@ -22,9 +21,9 @@
     <%= f.select :tipo, ["Dinheiro", "Cartão", "Poupança"] %>
   </div>
 
-  <div class="field">
-    <%= f.label :value %>
-    <%= f.text_field :value %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <strong><%= f.text_field :value, class: 'mdl-textfield__input' %></strong>
+    <%= f.label :value, class: 'mdl-textfield__label' %>
   </div>
 
   <div class="field">
@@ -32,17 +31,16 @@
     <%= f.select :sentido, ["entrada", "saida"] %>
   </div>
 
-  <div class="field">
-    <%= f.label :descricao %>
-    <%= f.text_area :descricao %>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <strong><%= f.text_area :descricao, class: 'mdl-textfield__input' %></strong>
+    <%= f.label :descricao, class: 'mdl-textfield__label' %>
   </div>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id, readonly: true, value: current_user.id %>
+    <%= f.hidden_field :user_id, readonly: true, value: current_user.id %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit (t :adicionar), class: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect', style: 'background-color: darkgoldenrod; color: white' %>
   </div>
 <% end %>

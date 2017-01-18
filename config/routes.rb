@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  resources :transfers
+  get 'transfer/new'
+
+  get 'transfer/create'
+
+  get 'transfer/edit'
+
+  get 'transfer/update'
+
+  get 'transfer/delete'
+
   resources :moves
   get '/dinheiro', to: 'moves#dinheiro'
   get '/cartao', to: 'moves#cartao'

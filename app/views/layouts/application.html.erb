@@ -4,8 +4,8 @@
     <title>Livro Razao </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all'%>
-    <%= javascript_include_tag 'application'%>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.yellow-red.min.css"/>
     <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
@@ -16,7 +16,7 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <h3 class="mdl-layout-title"> <i class="material-icons">monetization_on</i> Demonstrativo de controle de gastos </h3>
+          <h3 class="mdl-layout-title"> <i class="material-icons">monetization_on</i> <%=	t :T %> </h3>
           <div class="mdl-layout-spacer"></div>
           <div class="mdl-navigation">
             <% if user_signed_in? %>
@@ -27,19 +27,23 @@
             <% end %>
           </div>
         </div>
-        <% if user_signed_in? %>
-          <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect" style="color: black">
-            <div class="mdl-tabs__tab-bar">
-              <%=	link_to 'HOME', root_path, class: 'mdl-tabs__tab is-active mdl-tabs__panel', style: 'text-decoration: none' %>
-              <%=	link_to (t :money), dinheiro_path, class: 'mdl-tabs__tab is-active mdl-tabs__panel', style: 'text-decoration: none' %>
-              <%=	link_to (t :card), cartao_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
-              <%=	link_to (t :poup), poupanca_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
-              <%=	link_to (t :about), info_sobre_mim_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
-              <%=	link_to (t :novo), new_move_path, class: 'mdl-tabs__tab is-active', style: 'text-decoration: none' %>
-            </div>
-          </div>
-        <% end %>
       </header>
+
+      <% if user_signed_in? %>
+        <div class="mdl-layout__drawer">
+          <span class="mdl-layout-title" style="font-family: 'URW Palladio L','Century Schoolbook L'"> Menu </span>
+          <nav class="mdl-navigation">
+            <%=	link_to 'HOME', root_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :money), dinheiro_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :card), cartao_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :poup), poupanca_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :about), info_sobre_mim_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :novo), new_move_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+            <%=	link_to (t :transf), new_transfer_path, class: 'mdl-navigation_link', style: 'text-decoration: none' %>
+          </nav>
+        </div>
+      <% end %>
+
 
       <div class="mdl-layout__content">
         <main>

@@ -26,6 +26,10 @@ en:
   poup: 'Savings'
   title: "Central Hub"
   about: "About Me"
+  adicionar: "Add Move"
+
+  T: "Waste Control Tool"
+
   empty_line: 'No transfers have been made yet'
   p1: "Welcome to my Money Flow Tool. It is quite simple and it's made to make me improve my Ruby on Rails tecnical skills,
     and my habilities to work on small/medium projects, and client requisitions"

@@ -10,7 +10,9 @@ en:
   Pmessage: "In this page are shown transfers (ins and outs) made with bank savings. In the future, there will be a feature that creates
               a list of things you bought recently so you can track any kind of expense you have made. Creating a purchase,
               there will be a corresponding transfer register according to the kind of transfer you made"
-  novo: "+ Move"
+  novo: "New Move"
+  transf: "New Transfer"
+  buy: "Buy"
   entrada: "In"
   saida: "Out"
   edit_pro: "Edit Profile"

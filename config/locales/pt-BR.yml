@@ -65,6 +65,10 @@ pt-BR:
   money: Dinheiro
   poup: Poupança
   about: Sobre Mim
+  adicionar: "Adicionar Transferência"
+
+  T: "Ferramenta de Controle de gastos" # Título
+
   title: "Central de Informações"
   p1: "Bem vindo à minha aplicação de controle de entradas e saídas. Ela é simples, e visa tão somente o meu
     aprendizado técnico em Rails, bem como a minha habilidade de gerenciar um projeto de pequeno ou médio porte com

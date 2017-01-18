@@ -43,8 +43,8 @@ class MovesController < ApplicationController
 
     respond_to do |format|
       if @move.save
-        format.html { redirect_to @move, notice: 'Move was successfully created.' }
-        format.json { render :show, status: :created, location: @move }
+        format.html { redirect_to moves_path, notice: 'Move was successfully created.' }
+        format.json { render :'moves/index', status: :created, location: @move }
       else
         format.html { render :new }
         format.json { render json: @move.errors, status: :unprocessable_entity }
@@ -73,7 +73,7 @@ class MovesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to moves_url, notice: 'Move was successfully destroyed.' }
       format.json { head :no_content }
-      format.js { render :layout => false }
+      #format.js { render :layout => false }
     end
   end
 
